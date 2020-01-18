@@ -44,6 +44,21 @@
             padding: 5px 10px;
         }
 
+        .btn {
+            padding: 11px;
+            border-radius: 3px;
+            border: 1px solid #c7c7c7;
+            text-transform: uppercase;
+            font-weight: bold;
+            background: #fc0;
+            cursor: pointer;
+            transition: background-color .3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ffd633;
+        }
+
     </style>
 </head>
 <body class="body">
@@ -53,13 +68,16 @@
     <label class="center"> ToDo
         <input type="text" id="add_input"/>
     </label>
-    <button type="button" id="button" onclick="addText()">add</button>
+    <button type="button" id="button" disabled class="btn" onclick="addText()">add</button>
 
 
     <ul id="list">
 
         <li class="list-item">
-            <input type="checkbox" class="list-item-checkbox" onclick="clickYes(event)"/>
+            <input type="checkbox"
+                   class="list-item-checkbox"
+                   onclick="clickYes(event)"
+            />
             <span class="list-item-text">xtyjid568, </span>
         </li>
 

@@ -1,10 +1,19 @@
 const input = document.getElementById("add_input")
 input.addEventListener("keypress", (keyPressed) => {
     const keyEnter = 13;
-    if (keyPressed.which === keyEnter) {
-        attachBoxToParent(input.value)
-    }
+    const isEnter = keyPressed.which === keyEnter
+    const isEmpty = input.value.length === 0
+
+    if (isEnter && !isEmpty) attachBoxToParent(input.value)
 });
+
+input.addEventListener("input", (value) => {
+    if (input.value.length > 0) {
+        document.getElementById("button").disabled = '';
+    } else {
+        document.getElementById("button").disabled = 'disabled';
+    }
+})
 
 function addText() {
     const text = document.getElementById("add_input").value;
@@ -50,5 +59,4 @@ function clickYes(event) {
 
     event.target.parentElement.className = (event.target.checked) ? 'list item stroked-text' : 'list item'
 }
-
 
