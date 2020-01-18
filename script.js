@@ -42,15 +42,13 @@ function createBox(text) {
 }
 
 function clickYes(event) {
+    // if(event.target.checked) {
+    //     event.target.parentElement.className = 'list item stroked-text'
+    // } else {
+    //     event.target.parentElement.className = 'list item'
+    // }
 
-    // условие для отклика
-    // event.target.checked
-
-    event.target.parentElement.className = 'stroked-text'
-
-
-
-    
+    event.target.parentElement.className = (event.target.checked) ? 'list item stroked-text' : 'list item'
 }
 
 
