@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <style type="text/css">
+        .body {
+            margin: auto;
+        }
+
+        .center {
+            width: 200px; /* Ширина элемента в пикселах */
+            padding: 10px; /* Поля вокруг текста */
+            margin: auto; /* Выравниваем по центру */
+            background: #fc0; /* Цвет фона */
+        }
+
+        .stroked-text {
+            /*color: red;*/
+            text-decoration: line-through
+
+        }
+
+        #list {
+            list-style: none;
+            padding: 0;
+        }
+
+        #container {
+            width: 400px; /*Ширина блока*/
+            height: 200px; /*Высота блока*/
+            margin: 0 auto;
+            overflow: visible;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -200px; /*Смещаем блок на половину всей ширины влево*/
+            margin-top: -100px; /*Смещаем блок на половину высоты вверх*/
+            background: #ffffff;
+        }
+
+        #add_input {
+            padding: 5px 10px;
+        }
+
+    </style>
+</head>
+<body class="body">
+<div id="container">
+
+
+    <label class="center"> ToDo
+        <input type="text" id="add_input"/>
+    </label>
+    <button type="button" id="button" onclick="addText()">add</button>
+
+
+    <ul id="list">
+
+        <li class="list-item">
+            <input type="checkbox" class="list-item-checkbox" onclick="clickYes(event)"/>
+            <span class="list-item-text">xtyjid568, </span>
+        </li>
+
+    </ul>
+</div>
+
+</body>
+<script type="text/javascript" src="./script.js"></script>
+</html>
+
